@@ -17,7 +17,7 @@ body {
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   width: 95%;
-  max-width: 1200px; /* acum poate fi foarte mare */
+  max-width: 1200px; 
 }
 
 h1 {
@@ -27,8 +27,8 @@ h1 {
 }
 
 video {
-  width: 90%;       /* mai mare decât înainte */
-  max-width: 1000px; /* limitează pentru ecrane mari */
+  width: 90%;      
+  max-width: 1000px; 
   border: 6px solid #f48fb1;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
