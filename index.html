@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Player</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylish Video Player</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1> My Video Player</h1>
-    <video controls>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <div class="wrapper">
+    <h1>🎬 Custom Video Player</h1>
+
+    <div class="video-container">
+      <video id="myVideo">
+        <source src="video_720p.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <canvas id="videoCanvas"></canvas>
+    </div>
+
+    <div class="controls">
+      <button id="playPauseBtn" onclick="togglePlay()">▶ Play</button>
+
+      <div class="control-group">
+        <label>Volume</label>
+        <input type="range" min="0" max="1" step="0.05" value="1" onchange="changeVolume(this.value)">
+      </div>
+
+      <div class="control-group">
+        <label>Speed</label>
+        <select onchange="changeSpeed(this.value)">
+          <option value="0.5">0.5x</option>
+          <option value="1" selected>1x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2x</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>Quality</label>
+        <select onchange="changeQuality(this.value)">
+          <option value="480p">480p</option>
+          <option value="720p" selected>720p</option>
+          <option value="1080p">1080p</option>
+        </select>
+      </div>
+
+      <button onclick="makeFullscreen()">⛶ Fullscreen</button>
+
+      <div class="control-group">
+        <label>Filter</label>
+        <select onchange="changeFilter(this.value)">
+          <option value="none">None</option>
+          <option value="grayscale(100%)">Grayscale</option>
+          <option value="sepia(100%)">Sepia</option>
+          <option value="brightness(1.3)">Bright</option>
+          <option value="contrast(1.5)">Contrast</option>
+          <option value="blur(2px)">Blur</option>
+        </select>
+      </div>
+    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
