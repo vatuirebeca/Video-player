@@ -1,3 +1,3 @@
 # Video-player
 
-A simple HTML, CSS and JS video player proje
+A simple HTML, CSS and JS video player project.
